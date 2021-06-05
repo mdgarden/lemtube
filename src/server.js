@@ -1,36 +1,24 @@
 import express from "express";
+import morgan from "morgan";
 
 const PORT = 4000;
 
 const app = express();
+const logger = morgan("dev");
 
-const loggerMiddleware = (req, res, next) => {
-  console.log(`${req.method} ${req.url}`);
-  next();
+const home = (req, res) => {
+  return res.send("hello");
 };
 
-const privateMiddleware = (req, res, next) => {
-  const url = req.url;
-  if(url === "/protected"){
-    return res.send("<h1>Not Allowed</h1>");
-  }
-  console.log("pass")
-  next();
+const login = (req, res)  => {
+  return res.send("login");
 };
 
-
-const handleHome = (req, res) => {
-  return res.send("I love middlewares");
-};
-
-const handleProtected = (req, resm, next) => {
-  return res.send("Welcome to private rounge");
-};
-
-app.use(loggerMiddleware);
-app.use(privateMiddleware);
-app.get("/", handleHome);
-app.get("/protected", handleProtected)
+ // 나는 Middleware를 쓸 것이다 & 미들웨어 함수에 있는 내용을 먼저 읽어라
+ // Middlewares는 컨트롤러의 역할
+app.use(logger);
+app.get("/", home);
+app.get("/login", login)
 
 const handleListening = () => console.log(`Server Listening on http://localhost:${PORT} 🚀`);
 
