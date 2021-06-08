@@ -7,6 +7,7 @@
 ### babel
 - JS버전과 상관없이 모두 읽히도록 해주는 컴파일러
 
+# 3장 INTRODUCTION TO EXPRESS
 ## 3.5 Middlewares part One
 - Middleware에 대해서
   - Middleware는 request에 응답하지 않음 *이게 뭔말이지 호출해야한다는 얘기인가?*
@@ -24,3 +25,9 @@
 - node기반 서버들은 Logger를 잘 쓰기가 굉장히 어려움
 - morgan은 로깅을 도와주는 역할 / request와 response를 깔끔하게 formatting해주는 모듈
 - formatting된 log를 json형식으로 dump파일에 기록해주는 모듈이 winston(이번 강좌에서는 이용하지 않음)
+
+# 4장 Routers
+## 4.2 Cleaning the Code
+- 일단 써놓고 나중에 정리하자
+- export default 변수
+- js에서 모든 파일은 모듈, 버블과도 같다
