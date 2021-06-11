@@ -31,3 +31,12 @@
 - 일단 써놓고 나중에 정리하자
 - export default 변수
 - js에서 모든 파일은 모듈, 버블과도 같다
+
+## 4.8 URL Parameters part Two
+- 정규식은 문자열로부터 특정 정보를 추출해내는 방법
+- ab?c = b는 옵션 = abc, ac 가능(b가 있어도 되고 없어도 됨)
+- ab+cd = b가 여러개 가능 = abc,abbc, abbbbc등 b의 갯수 노상관
+- ab*cd = *에 뭐가 들어가도 괜찮음 = abcd, ab123cd, abRANDOMcd등등
+- /(ab\w+)/g = ab로 시작하는 모든 단어를 찾음(w는 anyword 라는 뜻)
+- /ab/g = ab와 정확하게 일치하는 단어를 찾음
+- \d는 숫자 (Digit) = \d+ = 숫자로 시작하는 단어 찾기 = \\d+는 숫자만
