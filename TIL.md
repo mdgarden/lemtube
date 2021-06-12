@@ -46,3 +46,7 @@
 - 현재 작업 디렉토리는 node.js를 실행하는 디렉토리임
 - 서버를 시작하거나 node.js를 실행하는건 package.json = package.json이 있는 곳이 현재 디렉토리
 - views안에 있는 home.pug파일을 보게하려면 cwd/src/views가 되어야함
+
+## 5.2 Partials
+- 파일명은 띄어쓰기가 있으면 안됨
+- 파일명은 소문자로 되어있어야함
