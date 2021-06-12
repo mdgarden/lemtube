@@ -40,3 +40,9 @@
 - /(ab\w+)/g = ab로 시작하는 모든 단어를 찾음(w는 anyword 라는 뜻)
 - /ab/g = ab와 정확하게 일치하는 단어를 찾음
 - \d는 숫자 (Digit) = \d+ = 숫자로 시작하는 단어 찾기 = \\d+는 숫자만
+
+# 5장 TEMPLATES
+## 5.1 Configuring Pug
+- 현재 작업 디렉토리는 node.js를 실행하는 디렉토리임
+- 서버를 시작하거나 node.js를 실행하는건 package.json = package.json이 있는 곳이 현재 디렉토리
+- views안에 있는 home.pug파일을 보게하려면 cwd/src/views가 되어야함

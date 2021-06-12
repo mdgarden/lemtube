@@ -23,3 +23,4 @@
 - JavaScript
 - Mongo DB
 - Express
+- Pug
