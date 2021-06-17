@@ -54,3 +54,10 @@
 ## 5.6 Conditionals
 - pug파일에서 텍스트안에 변수를 적을 때는 #{변수}
 - 텍스트와 섞어쓰지 않을 때는 h1=변수 이렇게 써도 ㅇㅋ
+
+# 6장 MONGODB AND MONGOOSE
+## 6.3 Edit Video part Two
+- express는 form으로 보낸 데이터를 읽지 못함
+- urlencoded로 해결 => from의 body를 이해함
+- extended : 보기좋게 정렬해줌(기본으로 true되어있음)
+- router를 사용하기 전에 app.use로 사용해야함
