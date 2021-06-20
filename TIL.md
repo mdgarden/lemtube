@@ -61,3 +61,6 @@
 - urlencoded로 해결 => from의 body를 이해함
 - extended : 보기좋게 정렬해줌(기본으로 true되어있음)
 - router를 사용하기 전에 app.use로 사용해야함
+
+## 6.7 Introduction to MongoDB
+- JSON document기반 데이터베이스
