@@ -91,3 +91,14 @@
 
 - {} : Search Terms
   - Search Terms가 비어있으면({}) 모든 형식을 찾는다는 것을 뜻함
+
+### 6.13 Async Await
+
+- Async와 callback의 작동원리 차이
+
+### 6.14 Returns and Renders
+
+- return의 역할 : 본질적인 return의 역할보다는 function을 마무리짓는 역할로 사용되고 있음.
+  - 이러한 경우 return이 없어도 정상적으로 동작하지만 실수를 방지하기 위해 return을 사용
+- render한 것은 다시 render 할 수 없음
+  - redirect, sendStatus, end 등등 포함(express에서 오류 발생)
