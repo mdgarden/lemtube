@@ -11,7 +11,7 @@ Video.find({}, (error, videos) => {
 console.log("finished")
 */
 
-export const home = (req, res) => {
+export const home = async (req, res) => {
   try {
     console.log("I started");
     const videos = await Video.find({});
@@ -44,6 +44,18 @@ export const getUpload = (req, res) => {
 };
 
 export const postUpload = (req, res) => {
-  const { title } = req.body;
+  const { title, description, hashtags } = req.body;
+  const video = new Video({
+    title,
+    description,
+    createdAt: Date.now(),
+    hashtags: hashtags.split(",").map((word) => `#${word}`),
+    meta: {
+      views: 0,
+      rating: 0,
+    },
+  });
+  console.log(video);
+  console.log(title, description, hashtags);
   return res.redirect("/");
 };
