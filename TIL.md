@@ -102,3 +102,17 @@
   - 이러한 경우 return이 없어도 정상적으로 동작하지만 실수를 방지하기 위해 return을 사용
 - render한 것은 다시 render 할 수 없음
   - redirect, sendStatus, end 등등 포함(express에서 오류 발생)
+
+### 6.15 Creating a Video part One
+
+- Video에 붙은 \_id는 mongo가 자동으로 붙여준 것
+
+### 6.19 Video Detail
+
+- Mongo가 붙여준 id를 가지고 어떻게 id인지 아닌지 판별할 것인가에 대한 문제
+  - 정규식으로 해결
+  - Mongo DB의 id는 24자리의 16진수로 이루어져있음
+  - [0-9a-f]{24} 로 해결 = 0에서 9까지, a에서 f까지 24번 맞는지 확인
+- 정규식 정리
+  - [MDN 공식 자료](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Regular_Expressions)
+  - [연습사이트](https://regex101.com/)
