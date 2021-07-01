@@ -131,3 +131,10 @@
 ### 6.24 Statics
 
 - findByIdAndUpdate()에서는 save훅업이 발생하지 않음
+
+### 6.25 Delete Video
+
+- function/화면 추가 순서
+  - URL확인 후 pug 템플릿 수정
+  - 라우터 수정
+  - 컨트롤러 수정
