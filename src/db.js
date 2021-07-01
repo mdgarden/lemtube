@@ -4,6 +4,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/lemtube", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
+  userCreateIndex: true,
 });
 
 const db = mongoose.connection;
