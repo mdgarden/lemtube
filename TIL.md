@@ -144,3 +144,7 @@
 ### 6.28 Conclusions
 
 - async&awati/regex/Mongoose
+
+### 7.2 Creating Account part Three
+
+- db.테이블이름.find()
