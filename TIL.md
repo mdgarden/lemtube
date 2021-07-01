@@ -138,3 +138,5 @@
   - URL확인 후 pug 템플릿 수정
   - 라우터 수정
   - 컨트롤러 수정
+- Model.findOneAndDelete() vs Model.findOneAndRemove()
+  - 몽고 db는 롤백이 안되기 때문에 remove를 사용할 타당한 이유가 없는 한 delete를 사용할 것
