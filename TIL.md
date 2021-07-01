@@ -121,3 +121,13 @@
 
 - 중요: middleware는 무조건 model이 생성되기 전에 만들어야 함
 - middlware는 save되기 전에 실행되는 것
+- DB 삭제하는 방법
+  - Console에 mongo 입력
+  - show dbs 입력
+  - 해당 DB 확인, 이번의 경우 Lemtube
+  - use lemtube (db의 이름)
+  - db.테이블이름.remove({})
+
+### 6.24 Statics
+
+- findByIdAndUpdate()에서는 save훅업이 발생하지 않음
