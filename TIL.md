@@ -116,3 +116,8 @@
 - 정규식 정리
   - [MDN 공식 자료](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Regular_Expressions)
   - [연습사이트](https://regex101.com/)
+
+### 6.23 Middlewares
+
+- 중요: middleware는 무조건 model이 생성되기 전에 만들어야 함
+- middlware는 save되기 전에 실행되는 것
