@@ -16,13 +16,13 @@ html(lang="ko")
                         li
                             a(href="/my-profile") #{loggedInUser.name}의 Profile
                     else
-                        li 
-                            a(href="/join") Join
                         li
-                            a(href="/login") Login
+                            a(href="/join")  Join
+                        li
+                            a(href="/login")  Login                        
                     li
                         a(href="/search") Search
-                    li 
+                    li
                         a(href="/videos/upload") Upload Video
         main
             block content
