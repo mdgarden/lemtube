@@ -158,8 +158,6 @@
 - import와 require의 차이 - import - require
   사용하고 싶은 모든 파일에 require를 추가해야함 = 번거로움
 
-- 현재 발생한 에러
-  - UnhandledPromiseRejectionWarning: MongoParseError: Invalid connection string
-    - console.log(env.DB_URL)로는 정상적으로 출력이 됨
-    - 앱 실행도 되긴 됨
-    - DB_URL에 오타도 없음
+### 7.18 Github Login part Three
+
+- fetch는 브라우저에서만 동작
