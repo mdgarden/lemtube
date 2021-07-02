@@ -115,12 +115,12 @@ export const finishGithubLogin = async (req, res) => {
     let user = await User.findOne({ email: emailObj.email });
     if (!user) {
       user = await User.create({
-        avataUrl: userData.avatar_url,
+        avatarUrl: userData.avatar_url,
         name: userData.name,
         username: userData.login,
         email: emailObj.email,
         password: "",
-        socailOnly: true,
+        socialOnly: true,
         location: userData.location,
       });
     }
@@ -133,9 +133,8 @@ export const finishGithubLogin = async (req, res) => {
 };
 
 export const logout = (req, res) => {
-  req.session.detroy();
+  req.session.destroy();
   return res.redirect("/");
 };
-
 export const edit = (req, res) => res.send("Edit User");
 export const see = (req, res) => res.send("See User");
