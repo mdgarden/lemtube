@@ -161,3 +161,7 @@
 ### 7.18 Github Login part Three
 
 - fetch는 브라우저에서만 동작
+
+### 8.1 Protector and Public Middlewares
+
+- 로그인 하지 않은 사람들이 보호해야하는 페이지에 갈 수 없도록 미들웨어를 이용해서 막기
