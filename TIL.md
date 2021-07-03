@@ -165,3 +165,12 @@
 ### 8.1 Protector and Public Middlewares
 
 - 로그인 하지 않은 사람들이 보호해야하는 페이지에 갈 수 없도록 미들웨어를 이용해서 막기
+
+### 8.3 Edit Profile POST part Two
+
+- 코드 챌린지
+  - 프로필을 업데이트 할 때, 이미 존재하는 아이디면 변경이 되지 않게 할 것
+  - 힌트 : userController.js의 exists
+  - 사용자가 닉네임이나 이메일을 업데이트하려고 하는지 어떻게 파악할 것인가
+  - form의 정보가 session의 user정보와 같은지 확인해야함
+  - session.user에 있는 username, email이랑 다른지 확인해야함
