@@ -5,10 +5,9 @@ export const localsMiddleware = (req, res, next) => {
   next();
 };
 
-
 export const protectorMiddleware = (req, res, next) => {
   if (req.session.loggedIn) {
-    retrun next();
+    return next();
   } else {
     return res.redirect("/login");
   }
