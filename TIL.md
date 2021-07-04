@@ -174,3 +174,13 @@
   - 사용자가 닉네임이나 이메일을 업데이트하려고 하는지 어떻게 파악할 것인가
   - form의 정보가 session의 user정보와 같은지 확인해야함
   - session.user에 있는 username, email이랑 다른지 확인해야함
+
+### 8.11 Video Owner
+
+- Mongoose-ref의 모델을 참고해서 Schema.Types.ObjectId의 아이디를 써라
+
+### 8.12 Video Owner part Two
+
+- populate("relationship");
+- populate 하기 전 : 리터럴리 오너의 id 그 자체 (알아보기 힘듦)
+- populate 후 : 오너의 object 전부가 들어가있음
