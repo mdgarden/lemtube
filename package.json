@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/mdgarden/lemtube#readme",
   "dependencies": {
+    "@babel/runtime": "^7.14.6",
     "babel-loader": "^8.2.2",
     "bcrypt": "^5.0.1",
     "connect-mongo": "^4.4.1",
