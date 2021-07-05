@@ -12,7 +12,7 @@ export const watch = async (req, res) => {
   const { id } = req.params;
   const video = await Video.findById(id).populate("owner");
   if (!video) {
-    return res.render("404", { pageTitle: "Video not found" });
+    return res.render("404", { pageTitle: "Video not found." });
   }
   return res.render("watch", { pageTitle: video.title, video });
 };
@@ -61,13 +61,15 @@ export const postUpload = async (req, res) => {
   const {
     user: { _id },
   } = req.session;
-  const { path: fileUrl } = req.file;
+  const { video, thumb } = req.files;
+  console.log(video, thumb);
   const { title, description, hashtags } = req.body;
   try {
     const newVideo = await Video.create({
       title,
       description,
-      fileUrl,
+      fileUrl: video[0].path,
+      thumbUrl: thumb[0].path,
       owner: _id,
       hashtags: Video.formatHashtags(hashtags),
     });
@@ -104,7 +106,7 @@ export const search = async (req, res) => {
   const { keyword } = req.query;
   let videos = [];
   if (keyword) {
-    videos = await Video.findOneAndDelete({
+    videos = await Video.find({
       title: {
         $regex: new RegExp(`${keyword}$`, "i"),
       },
@@ -117,9 +119,9 @@ export const registerView = async (req, res) => {
   const { id } = req.params;
   const video = await Video.findById(id);
   if (!video) {
-    return res.sendstatus(404);
+    return res.sendStatus(404);
   }
   video.meta.views = video.meta.views + 1;
   await video.save();
-  return res.sendstatus(200);
+  return res.sendStatus(200);
 };
