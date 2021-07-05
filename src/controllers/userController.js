@@ -134,11 +134,10 @@ export const finishGithubLogin = async (req, res) => {
 };
 
 export const logout = (req, res) => {
-  req.flash("info", "Bye Bye");
   req.session.destroy();
+  req.flash("info", "Bye Bye");
   return res.redirect("/");
 };
-
 export const getEdit = (req, res) => {
   return res.render("edit-profile", { pageTitle: "Edit Profile" });
 };
@@ -150,11 +149,11 @@ export const postEdit = async (req, res) => {
     body: { name, email, username, location },
     file,
   } = req;
-  console.log(file);
+  const isHeroku = process.env.NODE_ENV === "production";
   const updatedUser = await User.findByIdAndUpdate(
     _id,
     {
-      avatarUrl: file ? file.path : avatarUrl,
+      avatarUrl: file ? (isHeroku ? file.location : file.path) : avatarUrl,
       name,
       email,
       username,
@@ -163,7 +162,7 @@ export const postEdit = async (req, res) => {
     { new: true }
   );
   req.session.user = updatedUser;
-  return res.render("edit-profile");
+  return res.redirect("/users/edit");
 };
 
 export const getChangePassword = (req, res) => {
@@ -173,7 +172,6 @@ export const getChangePassword = (req, res) => {
   }
   return res.render("users/change-password", { pageTitle: "Change Password" });
 };
-
 export const postChangePassword = async (req, res) => {
   const {
     session: {
