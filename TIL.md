@@ -200,3 +200,4 @@
 
 - Heroku와 AWS이용
 - babel은 느리기 때문에 init.js를 일반적인 js코드로 바꿔야함. => Babel CLI이용
+- babel로 컴파일 하면 pug파일은 없기 때문에 따로 복붙해줘야함
