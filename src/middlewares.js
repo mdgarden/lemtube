@@ -20,7 +20,7 @@ export const publicOnlyMiddleware = (req, res, next) => {
   if (!req.session.loggedIn) {
     return next();
   } else {
-    req.flash("error", "Not authorized");
+    req.flash("error", "Log in first.");
     return res.redirect("/");
   }
 };
